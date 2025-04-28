@@ -12,7 +12,7 @@ subscription_path = subscriber.subscription_path(project_id, subscription_id)
 
 received_messages = 0
 start_time = None
-finished = False  # <--- add this
+finished = False 
 
 def callback(message: pubsub_v1.subscriber.message.Message) -> None:
     global received_messages, start_time, finished
@@ -27,7 +27,7 @@ def callback(message: pubsub_v1.subscriber.message.Message) -> None:
         print(f"Received {received_messages} messages...")
 
     if not finished and received_messages >= 462086:
-        finished = True  # <--- prevent multiple prints
+        finished = True 
         end_time = time.time()
         print(f"Finished receiving {received_messages} messages.")
         print(f"Time taken to receive: {end_time - start_time:.2f} seconds")
