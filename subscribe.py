@@ -2,7 +2,6 @@ import time
 from concurrent.futures import TimeoutError
 from google.cloud import pubsub_v1
 
-# Your settings
 project_id = "data-transport-lab1"
 subscription_id = "my-subscription"
 #timeout = 10.0  # Number of seconds to listen (can make it longer)
