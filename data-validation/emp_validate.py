@@ -5,12 +5,11 @@ import matplotlib.pyplot as plt
 file_path = '/home/vincle/data-validation/employees.csv'
 df = pd.read_csv(file_path)
 
-# 1. Check if 'name' field is missing
+Check if 'name' field is missing
 missing_name_count = df['name'].isnull().sum()
 
 print(f"Records with missing 'name': {missing_name_count}")
 
-# 2. Define a NEW Existence Assertion:
 # Assertion: every record must have a non-null 'eid' field
 missing_eid_count = df['eid'].isnull().sum()
 
@@ -57,5 +56,5 @@ plt.title('Salary Distribution')
 plt.xlabel('Salary')
 plt.ylabel('Frequency')
 plt.grid(True)
-plt.savefig('salary_histogram.png')  # Save the graph to a PNG file
+plt.savefig('salary_histogram.png') 
 
